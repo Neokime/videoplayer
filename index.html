@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Training Player</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #111;
+      color: #fff;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .sentence {
+      font-size: 24px;
+      margin-bottom: 20px;
+      min-height: 60px;
+    }
+
+    .controls button {
+      padding: 10px 15px;
+      margin-right: 10px;
+      font-size: 14px;
+    }
+
+    .status {
+      margin-top: 20px;
+      font-size: 12px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Shadowing Training</h2>
+
+    <div class="sentence" id="sentence">
+      Loading...
+    </div>
+
+    <div class="controls">
+      <button id="playBtn">▶ Example</button>
+      <button id="recordBtn">● Record</button>
+      <button id="replayBtn">⟳ Replay</button>
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
+    </div>
+
+    <div class="status" id="status">
+      Ready
+    </div>
+  </div>
+
+  <script src="player.js"></script>
+  <script src="record.js"></script>
+</body>
+</html>
