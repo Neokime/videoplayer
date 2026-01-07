@@ -7,10 +7,10 @@ let stream; // 전역으로 유지
  */
 async function startRecording() {
     try {
-        // 🔹 녹음 시작할 때마다 초기화
+        //  녹음 시작할 때마다 초기화
         audioChunks = [];
 
-        // 🔹 전역 stream 변수에 할당 (중요)
+        // 전역 stream 변수에 할당 (중요)
         stream = await navigator.mediaDevices.getUserMedia({ audio: true });
 
         // MediaRecorder 생성
@@ -26,7 +26,7 @@ async function startRecording() {
             const audioBlob = new Blob(audioChunks, { type: 'audio/webm' });
             const audioURL = URL.createObjectURL(audioBlob);
 
-            // 👉 나중에 Replay 버튼에서 재생할 수 있도록 저장
+            //  나중에 Replay 버튼에서 재생할 수 있도록 저장
             window.recordedAudioURL = audioURL;
 
             console.log("녹음 완료:", audioURL);
@@ -42,9 +42,7 @@ async function startRecording() {
     }
 }
 
-/**
- * 녹음을 중지하는 함수
- */
+/*녹음을 중지하는 함수*/
 function stopRecording() {
     // MediaRecorder 중지
     if (mediaRecorder && mediaRecorder.state !== "inactive") {
